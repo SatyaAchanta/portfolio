@@ -8,12 +8,14 @@ import Certifications from '@/components/Certifications';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Chatbot from '@/components/Chatbot';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <Chatbot />
       <About />
       <Experience />
       <Projects />

@@ -17,7 +17,10 @@
     "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "@ai-sdk/openai": "3.0.0-beta.52",
+    "@ai-sdk/react": "3.0.0-beta.93",
+    "ai": "6.0.0-beta.93"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
