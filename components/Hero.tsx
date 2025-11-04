@@ -32,9 +32,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-2xl md:text-4xl mb-6 font-light"
+            className="text-xl md:text-4xl mb-6 font-light "
           >
-            Senior Software Engineer | Full Stack Developer | Product Builder
+            Senior Software Engineer | Full Stack Engineer | Product Builder
           </motion.h2>
 
           <motion.p
