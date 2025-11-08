@@ -1,0 +1,74 @@
+﻿SATYA ACHANTA
+Senior Software Engineer | Full Stack Developer | Product Builder
+📍 Michigan, USA | 🌐 Portfolio | ✉️ satya.achantavenkata@gmail.com | 💼 Linkedin
+ A long, thin rectangle to divide sections of the document 
+
+EXPERIENCE
+Ithaka, Ann Arbor — Sr Software Engineer
+November 2019 - PRESENT
+Accomplished Senior Software Engineer with 10+ years of experience designing, developing, and modernizing large-scale web platforms and APIs. Proven track record of maintaining admin portals, reporting workflows, and public APIs in compliance with COUNTER specifications.
+* Reduced the end-user feedback loop by 50% by introducing a real-time feedback widget that streamlined user communication and improved feature turnaround.
+
+* Accelerated release velocity by 3× through the adoption of AI coding agents and automated testing pipelines.
+
+* Eliminated delivery bottlenecks by collaborating with product owners to plan and execute quarterly sprints with precision.
+
+* Enhanced CI/CD efficiency by building scalable pipelines using GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes.
+
+* Modernized legacy services into AWS Step Functions and Lambda architectures, improving scalability and reducing maintenance overhead.
+
+* Regular contributor to open-source design systems and experienced in implementing React/Python/Django microfrontends within enterprise design frameworks.
+* Recognized for end-to-end ownership across the SDLC—from architecture and QA to production deployment—with a strong focus on reliability, automation, and developer velocity.
+Infor, Ann Arbor — Software Engineer
+May 2015 - November 2019
+Engineered enterprise-grade software solutions for major automotive clients, driving feature delivery and system modernization across multiple business modules.
+   * Spearheaded front-end development in Angular 8 and built RESTful APIs with Spring Framework, enabling smooth data flow and responsive UI for high-traffic enterprise applications.
+
+   * Redesigned and optimized database schemas using Hibernate and SQL, improving data consistency and cutting query latency across reporting workflows.
+
+   * Partnered directly with the Principal Architect in recurring 1:1s to refine architectural design patterns and continuously elevate code quality standards.
+
+   * Led Angular migration initiatives, modernizing legacy front-end architecture and introducing automated linting (TSLint, ESLint) to enforce maintainability and reduce code smells.
+
+   * Automated release operations by developing silent-install scripts, streamlining deployment cycles and minimizing manual intervention.
+
+   * Accelerated analyst productivity by 30% through custom EDI mapping between reports and Java classes, removing repetitive data-handling steps.
+
+   * Contributed to d/EPM and Business Intelligence teams, integrating analytics and reporting systems that supported key business decisions.
+
+   * Championed Agile best practices and continuous integration via Jenkins, Git/SVN, and JIRA, while employing unit and integration testing for reliable, production-ready builds.
+
+
+CERTIFICATIONS & TRAININGS
+Certified Kubernetes Application Developer (CKAD)
+      * Certification ID: LF-hfc7lb3taq
+      * Issued by the Cloud Native Computing Foundation (CNCF)
+      * Demonstrates proficiency in designing, building, and deploying cloud-native applications for Kubernetes
+      * Validates skills in core concepts
+      * configuration, multi-container pods, observability, pod design, services & networking, state persistence, and troubleshooting
+LangChain, Langraph and LangSmith
+      * Gaining hands on experience on RAG and Agentic workflows in LangChain
+      * Implemented RAG ChatBot in Python for my resume and daily standup notes
+      * Proficient in creating vector embeddings in ChromaDB and tool calling in Langchain
+
+
+PROJECTS
+Full-Stack Engineer — Fantasy League MichCA
+www.fantasyleaguemichca.org
+Built and launched a prediction-based fantasy cricket platform for Michigan Cricket Association fans, enabling users to predict match outcomes, track leaderboards, and compete across weekly rounds. Designed to bring community engagement and data transparency to local cricket enthusiasts.
+      * Reduced result calculation time from 30 minutes to 15 seconds by engineering an automated scoring pipeline powered by Next.js (App Router), Prisma, and Neon Postgres Serverless DB.
+
+      * Built an end-to-end modern web stack using TypeScript, Next.js, and Clerk Authentication, with scalable deployments on Vercel.
+
+      * Implemented modular UI using ShadCN components, ensuring consistent design language and responsive layouts across devices.
+
+      * Added Progressive Web App (PWA) capabilities for partial offline access and mobile-friendly usage during live matches.
+
+      * Designed a maintainable serverless backend architecture, optimizing API performance and reducing hosting overhead.
+
+      * Spearheaded complete product lifecycle — from concept, design, and data modeling to user authentication, performance optimization, and production deployment.
+EDUCATION
+Eastern Michigan University, Ypsilanti — Masters in CS
+September 2013 - April 2015, Ypsilanti
+GPA: 3.75
+Pursued Masters in CS to expand my knowledge in CS core concepts and coding skills.
