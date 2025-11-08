@@ -115,7 +115,7 @@ export default function Hero() {
                className="hover:scale-110 transition-transform duration-300">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/satyaachanta" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/itsmesav" target="_blank" rel="noopener noreferrer"
                className="hover:scale-110 transition-transform duration-300">
               <FaLinkedin />
             </a>
