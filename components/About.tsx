@@ -41,10 +41,10 @@ export default function About() {
                     about reducing knowledge silos through documentation, automation, and continuous feedback.
                   </p>
                   <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    Currently at <strong>Ithaka</strong>, I lead the library team within JSTOR&apos;s Front-end 
-                    organization, mentor junior engineers, and introduced a real-time feedback widget that cut the 
-                    end-user feedback loop by 50%. I&apos;m also a CKAD-certified engineer and active contributor 
-                    to open-source design systems.
+                    Currently at <strong>Ithaka</strong>, I work with the library team within JSTOR&apos;s 
+                    Front-end organization, mentor junior engineers, and introduced a real-time feedback widget 
+                    that cut the end-user feedback loop by 50%. I&apos;m also a CKAD-certified engineer and active 
+                    contributor to open-source design systems.
                   </p>
                   
                   <div className="mt-6 flex flex-wrap gap-3">
