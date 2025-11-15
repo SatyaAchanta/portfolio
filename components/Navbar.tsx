@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { AppBar, Toolbar, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import { FaBars, FaTimes } from 'react-icons/fa';
-
-const navLinks = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Certifications', href: '#certifications' },
-  { name: 'Education', href: '#education' },
-  { name: 'Contact', href: '#contact' },
-];
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { navLinks } from "./navLinks";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,8 +24,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleDrawerToggle = () => {
@@ -33,13 +34,16 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar 
-        position="fixed" 
+      <AppBar
+        position="fixed"
         sx={{
-          backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-          backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-          boxShadow: isScrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none',
-          transition: 'all 0.3s ease',
+          backgroundColor: isScrolled
+            ? "rgba(255, 255, 255, 0.95)"
+            : "transparent",
+          backdropFilter: isScrolled ? "blur(10px)" : "none",
+          boxShadow: isScrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+          transition: "all 0.3s ease",
+          display: { xs: "block", lg: "none" },
         }}
       >
         <Toolbar className="container mx-auto">
@@ -48,7 +52,10 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="flex-grow"
           >
-            <a href="#" className={`text-2xl font-bold ${isScrolled ? 'gradient-text' : 'text-white'}`}>
+            <a
+              href="#"
+              className={`text-2xl font-bold ${isScrolled ? "gradient-text" : "text-white"}`}
+            >
               SA
             </a>
           </motion.div>
@@ -65,10 +72,12 @@ export default function Navbar() {
                 <Button
                   href={link.href}
                   sx={{
-                    color: isScrolled ? '#1f2937' : 'white',
-                    '&:hover': {
-                      backgroundColor: isScrolled ? 'rgba(102, 126, 234, 0.1)' : 'rgba(255, 255, 255, 0.1)',
-                    }
+                    color: isScrolled ? "#1f2937" : "white",
+                    "&:hover": {
+                      backgroundColor: isScrolled
+                        ? "rgba(102, 126, 234, 0.1)"
+                        : "rgba(255, 255, 255, 0.1)",
+                    },
                   }}
                 >
                   {link.name}
@@ -80,10 +89,12 @@ export default function Navbar() {
               href="/resume.pdf"
               download
               sx={{
-                background: 'linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #0369a1 100%)',
-                '&:hover': {
-                  background: 'linear-gradient(135deg, #0e7490 0%, #0369a1 50%, #075985 100%)',
-                }
+                background:
+                  "linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #0369a1 100%)",
+                "&:hover": {
+                  background:
+                    "linear-gradient(135deg, #0e7490 0%, #0369a1 50%, #075985 100%)",
+                },
               }}
             >
               Resume
@@ -93,11 +104,13 @@ export default function Navbar() {
               href="/cover-letter.pdf"
               download
               sx={{
-                borderColor: isScrolled ? '#0891b2' : 'white',
-                color: isScrolled ? '#0891b2' : 'white',
-                '&:hover': {
-                  backgroundColor: isScrolled ? 'rgba(8, 145, 178, 0.1)' : 'rgba(255, 255, 255, 0.1)',
-                }
+                borderColor: isScrolled ? "#0891b2" : "white",
+                color: isScrolled ? "#0891b2" : "white",
+                "&:hover": {
+                  backgroundColor: isScrolled
+                    ? "rgba(8, 145, 178, 0.1)"
+                    : "rgba(255, 255, 255, 0.1)",
+                },
               }}
             >
               Cover Letter
@@ -107,9 +120,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <IconButton
             onClick={handleDrawerToggle}
-            sx={{ 
-              color: isScrolled ? '#1f2937' : 'white',
-              display: { xs: 'block', md: 'none' }
+            sx={{
+              color: isScrolled ? "#1f2937" : "white",
+              display: { xs: "block", md: "none" },
             }}
           >
             {mobileOpen ? <FaTimes /> : <FaBars />}
@@ -123,8 +136,8 @@ export default function Navbar() {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         sx={{
-          display: { xs: 'block', md: 'none' },
-          '& .MuiDrawer-paper': { width: 250 },
+          display: { xs: "block", md: "none" },
+          "& .MuiDrawer-paper": { width: 250 },
         }}
       >
         <div className="p-4">
@@ -137,30 +150,27 @@ export default function Navbar() {
           <List>
             {navLinks.map((link) => (
               <ListItem key={link.name} disablePadding>
-                <ListItemButton 
-                  href={link.href} 
-                  onClick={handleDrawerToggle}
-                >
+                <ListItemButton href={link.href} onClick={handleDrawerToggle}>
                   <ListItemText primary={link.name} />
                 </ListItemButton>
               </ListItem>
             ))}
             <ListItem disablePadding>
-              <ListItemButton 
-                href="/resume.pdf" 
+              <ListItemButton
+                href="/resume.pdf"
                 download
                 onClick={handleDrawerToggle}
-                sx={{ color: '#0891b2', fontWeight: 'bold' }}
+                sx={{ color: "#0891b2", fontWeight: "bold" }}
               >
                 <ListItemText primary="Download Resume" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton 
-                href="/cover-letter.pdf" 
+              <ListItemButton
+                href="/cover-letter.pdf"
                 download
                 onClick={handleDrawerToggle}
-                sx={{ color: '#0891b2', fontWeight: 'bold' }}
+                sx={{ color: "#0891b2", fontWeight: "bold" }}
               >
                 <ListItemText primary="Download Cover Letter" />
               </ListItemButton>
