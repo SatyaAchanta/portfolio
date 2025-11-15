@@ -113,6 +113,26 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ scale: 1.05, x: 10 }}
+                  className="flex items-center gap-4 rounded-2xl border border-blue-100/70 bg-white/80 p-4 shadow-lg dark:border-blue-800/40 dark:bg-gray-900/80"
+                >
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <FaPhone className="text-white text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+17343830393"
+                      className="text-gray-800 dark:text-white font-semibold hover:text-blue-600 wrap-normal"
+                    >
+                      (734) 383-0393
+                    </a>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.05, x: 10 }}
                   className="flex items-center gap-4 rounded-2xl border border-green-100/70 bg-white/80 p-4 shadow-lg dark:border-green-800/40 dark:bg-gray-900/80"
                 >
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
