@@ -104,7 +104,7 @@ export default function Contact() {
                     </p>
                     <a
                       href="mailto:satya.achantavenkata@gmail.com"
-                      className="text-gray-800 dark:text-white font-semibold hover:text-purple-600 wrap-normal"
+                      className="break-words text-gray-200 dark:text-white font-semibold hover:text-purple-300"
                     >
                       satya.achantavenkata@gmail.com
                     </a>
@@ -124,7 +124,7 @@ export default function Contact() {
                     </p>
                     <a
                       href="tel:+17343830393"
-                      className="text-gray-800 dark:text-white font-semibold hover:text-blue-600 wrap-normal"
+                      className="break-words text-gray-200 dark:text-white font-semibold hover:text-blue-300"
                     >
                       (734) 383-0393
                     </a>
