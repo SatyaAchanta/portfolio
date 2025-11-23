@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { FaBriefcase, FaCalendar, FaMapMarkerAlt } from "react-icons/fa";
+import TruncatedText from "./TruncatedText";
+import ExpandableList from "./ExpandableList";
 
 const experiences = [
   {
@@ -51,7 +53,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-800">
+    <section id="experience" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -72,42 +74,37 @@ export default function Experience() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className={`rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-xl`}
               >
-                <div className="flex h-full flex-col rounded-2xl bg-white/95 p-6 dark:bg-gray-900/95">
+                <div className="flex h-full flex-col rounded-2xl bg-gray-900/95 p-6">
                   <div className="flex items-center gap-3">
-                    <FaBriefcase className="text-xl text-purple-600" />
+                    <FaBriefcase className="text-xl text-purple-400" />
                     <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
+                      <p className="text-sm uppercase tracking-[0.2em] text-gray-400">
                         {exp.company}
                       </p>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                      <h3 className="text-2xl font-bold text-white">
                         {exp.role}
                       </h3>
                     </div>
                   </div>
 
-                  <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-400">
                     <span className="inline-flex items-center gap-2">
-                      <FaCalendar className="text-purple-500" />
+                      <FaCalendar className="text-purple-400" />
                       {exp.period}
                     </span>
                     <span className="inline-flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-500" />
+                      <FaMapMarkerAlt className="text-purple-400" />
                       {exp.location}
                     </span>
                   </div>
 
-                  <p className="mt-4 text-gray-700 dark:text-gray-300">
-                    {exp.description}
+                  <p className="mt-4 text-gray-300">
+                    <TruncatedText text={exp.description} maxLength={80} />
                   </p>
 
-                  <ul className="mt-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                    {exp.highlights.slice(0, 4).map((highlight) => (
-                      <li key={highlight} className="flex gap-2">
-                        <span className="text-purple-600">▸</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mt-6">
+                    <ExpandableList items={exp.highlights} initialCount={3} />
+                  </div>
                 </div>
               </motion.article>
             ))}

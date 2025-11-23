@@ -14,7 +14,7 @@ import MobileSectionNav from "@/components/MobileSectionNav";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-100 dark:bg-gray-950">
+    <main className="min-h-screen bg-gray-950">
       <Navbar />
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 pb-20 pt-24 lg:flex-row lg:gap-16 lg:px-10 lg:pb-24 lg:pt-16">
         <div className="lg:w-[360px]">

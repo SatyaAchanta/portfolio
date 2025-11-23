@@ -38,10 +38,10 @@ export default function Navbar() {
         position="fixed"
         sx={{
           backgroundColor: isScrolled
-            ? "rgba(255, 255, 255, 0.95)"
+            ? "rgba(17, 24, 39, 0.95)"
             : "transparent",
           backdropFilter: isScrolled ? "blur(10px)" : "none",
-          boxShadow: isScrolled ? "0 2px 10px rgba(0,0,0,0.1)" : "none",
+          boxShadow: isScrolled ? "0 2px 10px rgba(0,0,0,0.5)" : "none",
           transition: "all 0.3s ease",
           display: { xs: "block", lg: "none" },
         }}
@@ -54,7 +54,7 @@ export default function Navbar() {
           >
             <a
               href="#"
-              className={`text-2xl font-bold ${isScrolled ? "gradient-text" : "text-white"}`}
+              className="text-2xl font-bold text-white"
             >
               SA
             </a>
@@ -72,11 +72,9 @@ export default function Navbar() {
                 <Button
                   href={link.href}
                   sx={{
-                    color: isScrolled ? "#1f2937" : "white",
+                    color: "white",
                     "&:hover": {
-                      backgroundColor: isScrolled
-                        ? "rgba(102, 126, 234, 0.1)"
-                        : "rgba(255, 255, 255, 0.1)",
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
                     },
                   }}
                 >
@@ -104,12 +102,10 @@ export default function Navbar() {
               href="/cover-letter.pdf"
               download
               sx={{
-                borderColor: isScrolled ? "#0891b2" : "white",
-                color: isScrolled ? "#0891b2" : "white",
+                borderColor: "white",
+                color: "white",
                 "&:hover": {
-                  backgroundColor: isScrolled
-                    ? "rgba(8, 145, 178, 0.1)"
-                    : "rgba(255, 255, 255, 0.1)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
                 },
               }}
             >
@@ -121,7 +117,7 @@ export default function Navbar() {
           <IconButton
             onClick={handleDrawerToggle}
             sx={{
-              color: isScrolled ? "#1f2937" : "white",
+              color: "white",
               display: { xs: "block", md: "none" },
             }}
           >
@@ -137,20 +133,28 @@ export default function Navbar() {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: "block", md: "none" },
-          "& .MuiDrawer-paper": { width: 250 },
+          "& .MuiDrawer-paper": { 
+            width: 250,
+            backgroundColor: "#1f2937",
+            color: "#ffffff"
+          },
         }}
       >
         <div className="p-4">
           <div className="flex justify-between items-center mb-4">
             <span className="text-2xl font-bold gradient-text">Menu</span>
-            <IconButton onClick={handleDrawerToggle}>
+            <IconButton onClick={handleDrawerToggle} sx={{ color: "#ffffff" }}>
               <FaTimes />
             </IconButton>
           </div>
           <List>
             {navLinks.map((link) => (
               <ListItem key={link.name} disablePadding>
-                <ListItemButton href={link.href} onClick={handleDrawerToggle}>
+                <ListItemButton 
+                  href={link.href} 
+                  onClick={handleDrawerToggle}
+                  sx={{ color: "#ffffff" }}
+                >
                   <ListItemText primary={link.name} />
                 </ListItemButton>
               </ListItem>

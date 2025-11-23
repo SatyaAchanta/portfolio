@@ -5,8 +5,8 @@ import { navLinks } from "./navLinks";
 
 export default function SideNavigation() {
   return (
-    <nav className="hidden rounded-3xl border border-white/40 bg-white/80 p-6 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-gray-900/80 lg:block">
-      <p className="text-xs uppercase tracking-[0.4em] text-gray-500 dark:text-gray-400">
+    <nav className="hidden rounded-3xl border border-white/10 bg-gray-900/80 p-6 shadow-2xl backdrop-blur-xl lg:block">
+      <p className="text-xs uppercase tracking-[0.4em] text-gray-400">
         Sections
       </p>
       <ul className="mt-4 flex flex-col gap-2">

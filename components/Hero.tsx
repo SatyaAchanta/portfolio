@@ -153,7 +153,7 @@ export default function Hero() {
               Focus
             </dt>
             <dd className="font-semibold">
-              React · TypeScript · Python · Cloud Platforms · Design Systems
+              React · TypeScript · Python · Java · Developer Experience · Cloud Platforms · Design Systems
             </dd>
           </div>
         </motion.dl>

@@ -62,7 +62,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
@@ -81,10 +81,10 @@ export default function Contact() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <h3 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
+              <h3 className="text-3xl font-bold mb-6 text-white">
                 Let&apos;s Connect
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 I&apos;m always open to discussing new projects, creative ideas,
                 or opportunities to be part of your visions. Feel free to reach
                 out!
@@ -93,18 +93,18 @@ export default function Contact() {
               <div className="space-y-6">
                 <motion.div
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="flex items-center gap-4 rounded-2xl border border-purple-100/70 bg-white/80 p-4 shadow-lg dark:border-purple-800/40 dark:bg-gray-900/80"
+                  className="flex items-center gap-4 rounded-2xl border border-purple-800/40 bg-gray-900/80 p-4 shadow-lg"
                 >
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <FaEnvelope className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-400">
                       Email
                     </p>
                     <a
                       href="mailto:satya.achantavenkata@gmail.com"
-                      className="break-words text-gray-200 dark:text-white font-semibold hover:text-purple-300"
+                      className="break-words text-gray-200 font-semibold hover:text-blue-300"
                     >
                       satya.achantavenkata@gmail.com
                     </a>
@@ -113,18 +113,18 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="flex items-center gap-4 rounded-2xl border border-blue-100/70 bg-white/80 p-4 shadow-lg dark:border-blue-800/40 dark:bg-gray-900/80"
+                  className="flex items-center gap-4 rounded-2xl border border-blue-800/40 bg-gray-900/80 p-4 shadow-lg"
                 >
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <FaPhone className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-400">
                       Phone
                     </p>
                     <a
                       href="tel:+17343830393"
-                      className="break-words text-gray-200 dark:text-white font-semibold hover:text-blue-300"
+                      className="break-words text-gray-200 font-semibold hover:text-blue-300"
                     >
                       (734) 383-0393
                     </a>
@@ -133,16 +133,16 @@ export default function Contact() {
 
                 <motion.div
                   whileHover={{ scale: 1.05, x: 10 }}
-                  className="flex items-center gap-4 rounded-2xl border border-green-100/70 bg-white/80 p-4 shadow-lg dark:border-green-800/40 dark:bg-gray-900/80"
+                  className="flex items-center gap-4 rounded-2xl border border-blue-800/40 bg-gray-900/80 p-4 shadow-lg"
                 >
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <FaMapMarkerAlt className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-400">
                       Location
                     </p>
-                    <p className="text-gray-800 dark:text-white font-semibold">
+                    <p className="text-white font-semibold">
                       Ann Arbor, Michigan
                     </p>
                   </div>
@@ -155,14 +155,14 @@ export default function Contact() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-2xl dark:border-slate-800/60 dark:bg-gray-900/90"
+              className="rounded-3xl border border-white/10 bg-gray-900/80 p-8 shadow-2xl backdrop-blur-xl"
             >
-              <div className="mb-6 text-sm uppercase tracking-[0.4em] text-slate-500 dark:text-slate-300">
+              <div className="mb-6 text-sm uppercase tracking-[0.4em] text-slate-300">
                 Send a Note
               </div>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-300">
+                  <p className="text-sm font-semibold text-slate-300">
                     Your Name
                   </p>
                   <TextField
@@ -178,7 +178,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-300">
+                  <p className="text-sm font-semibold text-slate-300">
                     Your Email
                   </p>
                   <TextField
@@ -195,7 +195,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-300">
+                  <p className="text-sm font-semibold text-slate-300">
                     Your Message
                   </p>
                   <TextField
