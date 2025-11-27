@@ -99,9 +99,7 @@ export default function Contact() {
                     <FaEnvelope className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">
-                      Email
-                    </p>
+                    <p className="text-sm text-gray-400">Email</p>
                     <a
                       href="mailto:satya.achantavenkata@gmail.com"
                       className="break-words text-gray-200 font-semibold hover:text-blue-300"
@@ -119,14 +117,12 @@ export default function Contact() {
                     <FaPhone className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">
-                      Phone
-                    </p>
+                    <p className="text-sm text-gray-400">Phone</p>
                     <a
-                      href="tel:+17343830393"
+                      href="tel:+18135381113"
                       className="break-words text-gray-200 font-semibold hover:text-blue-300"
                     >
-                      (734) 383-0393
+                      (813) 538-1113
                     </a>
                   </div>
                 </motion.div>
@@ -139,9 +135,7 @@ export default function Contact() {
                     <FaMapMarkerAlt className="text-white text-xl" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">
-                      Location
-                    </p>
+                    <p className="text-sm text-gray-400">Location</p>
                     <p className="text-white font-semibold">
                       Ann Arbor, Michigan
                     </p>
