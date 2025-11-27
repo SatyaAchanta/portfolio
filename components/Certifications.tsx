@@ -1,23 +1,68 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { FaCertificate, FaAward, FaCheck } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { FaAward, FaCheck } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Certifications() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const skills = [
-    'Core Concepts',
-    'Configuration',
-    'Multi-container Pods',
-    'Observability',
-    'Pod Design',
-    'Services & Networking',
-    'State Persistence',
-    'Troubleshooting'
+  const ckadSkills = [
+    "Core Concepts",
+    "Configuration",
+    "Multi-container Pods",
+    "Observability",
+    "Pod Design",
+    "Services & Networking",
+    "State Persistence",
+    "Troubleshooting",
+  ];
+
+  const cbaSkills = [
+    "Backstage Development Workflow",
+    "Backstage Infrastructure",
+    "Backstage Catalog",
+    "Customizing Backstage",
+    "Frontend & Backend Plugins",
+    "React & Material UI Components",
+    "TypeScript Compilation",
+    "Docker & Container Images",
+  ];
+
+  const certifications = [
+    {
+      id: "ckad",
+      title: "Certified Kubernetes Application Developer",
+      abbreviation: "CKAD",
+      issuer: "Cloud Native Computing Foundation (CNCF)",
+      certificationId: "LF-hfc7lb3taq",
+      issued: "February 2025",
+      description:
+        "Demonstrates proficiency in designing, building, and deploying cloud-native applications for Kubernetes. Gained deep expertise in debugging applications faster through implementing CI/CD pipelines from scratch using Kubernetes, enabling smarter and faster delivery workflows.",
+      skills: ckadSkills,
+      gradientFrom: "from-purple-500",
+      gradientTo: "to-pink-500",
+      iconBg: "from-blue-500 to-purple-600",
+      image: "/ckad.png",
+    },
+    {
+      id: "cba",
+      title: "Certified Backstage Associate",
+      abbreviation: "CBA",
+      issuer: "The Linux Foundation",
+      certificationId: "LF-sa3hh6zbfo",
+      issued: "November 2025",
+      description:
+        "Proves expertise in leveraging and building standardized developer platforms using Backstage. Demonstrates the ability to work with internal development platforms essential for fast developer onboarding, cross-team collaboration, and product innovation.",
+      skills: cbaSkills,
+      gradientFrom: "from-cyan-500",
+      gradientTo: "to-teal-500",
+      iconBg: "from-cyan-500 to-teal-600",
+      image: "/cba.png",
+    },
   ];
 
   return (
@@ -33,64 +78,76 @@ export default function Certifications() {
             <span className="gradient-text">Certifications</span>
           </h2>
 
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-gradient-to-br from-purple-500 to-pink-500 p-1 rounded-2xl shadow-2xl"
-            >
-              <div className="bg-gray-900 p-8 md:p-12 rounded-xl">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="flex-shrink-0">
-                    <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-xl">
-                      <FaCertificate className="text-6xl text-white" />
-                    </div>
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <FaAward className="text-3xl text-yellow-500" />
-                      <h3 className="text-3xl font-bold text-white">
-                        Certified Kubernetes Application Developer
-                      </h3>
-                    </div>
-
-                    <div className="mb-4">
-                      <p className="text-lg text-gray-300 mb-2">
-                        <strong>Issued by:</strong> Cloud Native Computing Foundation (CNCF)
-                      </p>
-                      <p className="text-lg text-gray-300 mb-2">
-                        <strong>Certification ID:</strong> <span className="font-mono text-purple-400">LF-hfc7lb3taq</span>
-                      </p>
-                      <p className="text-lg text-gray-300">
-                        <strong>Issued:</strong> February 2025
-                      </p>
+          <div className="max-w-5xl mx-auto space-y-8">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 0.2 + index * 0.2, duration: 0.8 }}
+                className={`bg-linear-to-br ${cert.gradientFrom} ${cert.gradientTo} p-1 rounded-2xl shadow-2xl`}
+              >
+                <div className="bg-gray-900 p-8 md:p-12 rounded-xl">
+                  <div className="flex flex-col md:flex-row gap-8 items-center">
+                    <div className="shrink-0">
+                      <div className="w-32 h-32 relative rounded-full overflow-hidden shadow-xl">
+                        <Image
+                          src={cert.image}
+                          alt={`${cert.abbreviation} Badge`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
 
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      Demonstrates proficiency in designing, building, and deploying cloud-native applications for Kubernetes. 
-                      Gained deep expertise in debugging applications faster through implementing CI/CD pipelines from scratch 
-                      using Kubernetes, enabling smarter and faster delivery workflows.
-                    </p>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-4">
+                        <FaAward className="text-3xl text-yellow-500" />
+                        <h3 className="text-2xl md:text-3xl font-bold text-white">
+                          {cert.title}
+                        </h3>
+                      </div>
 
-                    <div className="bg-gray-800 rounded-lg p-6">
-                      <h4 className="font-bold text-white mb-4 flex items-center gap-2">
-                        <span>Validated Skills:</span>
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {skills.map((skill, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <FaCheck className="text-green-500 flex-shrink-0" />
-                            <span className="text-gray-300">{skill}</span>
-                          </div>
-                        ))}
+                      <div className="mb-4">
+                        <p className="text-lg text-gray-300 mb-2">
+                          <strong>Issued by:</strong> {cert.issuer}
+                        </p>
+                        <p className="text-lg text-gray-300 mb-2">
+                          <strong>Certification ID:</strong>{" "}
+                          <span className="font-mono text-purple-400">
+                            {cert.certificationId}
+                          </span>
+                        </p>
+                        <p className="text-lg text-gray-300">
+                          <strong>Issued:</strong> {cert.issued}
+                        </p>
+                      </div>
+
+                      <p className="text-gray-300 mb-6 leading-relaxed">
+                        {cert.description}
+                      </p>
+
+                      <div className="bg-gray-800 rounded-lg p-6">
+                        <h4 className="font-bold text-white mb-4 flex items-center gap-2">
+                          <span>Validated Skills:</span>
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {cert.skills.map((skill, skillIndex) => (
+                            <div
+                              key={skillIndex}
+                              className="flex items-center gap-2"
+                            >
+                              <FaCheck className="text-green-500 shrink-0" />
+                              <span className="text-gray-300">{skill}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

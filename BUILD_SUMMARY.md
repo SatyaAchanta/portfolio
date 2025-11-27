@@ -19,7 +19,7 @@ portfolio/
 │   ├── About.tsx            # About me section
 │   ├── Experience.tsx       # Work experience timeline
 │   ├── Skills.tsx           # Tech stack with icons
-│   ├── Certifications.tsx   # CKAD certification showcase
+│   ├── Certifications.tsx   # CKAD & CBA certifications showcase
 │   ├── Education.tsx        # Education details
 │   ├── Contact.tsx          # Contact form + info
 │   └── Footer.tsx           # Footer with social links
@@ -52,7 +52,7 @@ portfolio/
 2. **About Section**
    - Professional summary
    - Current role at Ithaka
-   - Location, education, certification badges
+   - Location, education, multiple certification badges
 
 3. **Experience Timeline**
    - 3 positions with detailed highlights
@@ -71,9 +71,11 @@ portfolio/
    - Additional technologies listed
 
 5. **Certifications**
-   - CKAD certification highlighted
-   - Certification ID displayed
-   - 8 validated skills listed
+   - CKAD (Certified Kubernetes Application Developer) - CNCF
+   - CBA (Certified Backstage Associate) - Linux Foundation
+   - Certification IDs and issue dates displayed
+   - Validated skills listed for each certification
+   - Badge images for both certifications
 
 6. **Education**
    - Masters in CS from EMU
