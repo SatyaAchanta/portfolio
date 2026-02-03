@@ -16,7 +16,7 @@ const socialLinks = [
     href: "mailto:satya.achantavenkata@gmail.com",
     label: "Email",
   },
-  { Icon: FaPhone, href: "tel:+17343830393", label: "Phone" },
+  { Icon: FaPhone, href: "tel:+18135381113", label: "Phone" },
 ];
 
 export default function Hero() {
@@ -153,7 +153,8 @@ export default function Hero() {
               Focus
             </dt>
             <dd className="font-semibold">
-              React · TypeScript · Python · Java · Developer Experience · Cloud Platforms · Design Systems
+              React · TypeScript · Python · Java · Developer Experience · Cloud
+              Platforms · Design Systems
             </dd>
           </div>
         </motion.dl>
