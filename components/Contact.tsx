@@ -29,8 +29,8 @@ export default function Contact() {
       <div className="surface p-5">
         <a
           href="mailto:satya.achantavenkata@gmail.com"
-          className="inline-block rounded-md px-4 py-2 text-sm font-medium text-white"
-          style={{ backgroundColor: "var(--button-bg)" }}
+          className="inline-block rounded-md border px-4 py-2 text-sm font-medium"
+          style={{ borderColor: "var(--border)" }}
         >
           Email Me
         </a>

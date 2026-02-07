@@ -5,17 +5,16 @@ export default function About() {
         About
       </h2>
       <p className="section-intro">
-        I deliver scalable, testable products by combining strong engineering
-        fundamentals with pragmatic execution.
+        Engineering summary from resume.
       </p>
 
       <div className="surface p-5">
         <ul className="m-0 list-disc space-y-2 pl-5">
-          <li>10+ years in full-stack development across enterprise and SaaS products.</li>
-          <li>Modernized legacy systems into cloud-native workflows using AWS Lambda and Step Functions.</li>
-          <li>Built CI/CD pipelines with GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes.</li>
-          <li>Mentor engineers and drive cross-team delivery through documentation and clean ownership.</li>
-          <li>Based in Michigan. M.S. in Computer Science from Eastern Michigan University.</li>
+          <li>10+ years designing and scaling enterprise web platforms and APIs.</li>
+          <li>Proven track record of driving architectural decisions and platform modernization.</li>
+          <li>Improved developer velocity and business impact through automation.</li>
+          <li>Strong advocate for reliability, clean abstractions, and maintainability.</li>
+          <li>Mentor engineers across the SDLC and support high ownership culture.</li>
         </ul>
       </div>
     </section>

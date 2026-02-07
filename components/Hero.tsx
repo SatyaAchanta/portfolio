@@ -2,19 +2,19 @@ export default function Hero() {
   return (
     <section className="py-8 md:py-10" aria-labelledby="hero-name">
       <p className="mb-2 text-xs uppercase tracking-[0.2em]" style={{ color: "var(--muted)" }}>
-        Senior Software Engineer
+        Senior Software Engineer | Full Stack Developer | Product Builder
       </p>
       <h1 id="hero-name" className="m-0 text-4xl font-semibold tracking-tight md:text-5xl">
         Satya Achanta
       </h1>
       <p className="mt-3 max-w-3xl text-base md:text-lg" style={{ color: "var(--muted)" }}>
-        10+ years building and modernizing large-scale web platforms. I focus on
-        clear architecture, reliable delivery pipelines, and measurable product
-        outcomes.
+        Lead-minded Senior Software Engineer with 10+ years of experience
+        designing and scaling enterprise web platforms and APIs, with focus on
+        reliability, clean abstractions, and mentoring across the SDLC.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
-        <a href="mailto:satya.achantavenkata@gmail.com" className="rounded-md px-3 py-2 text-white" style={{ backgroundColor: "var(--button-bg)" }}>
+        <a href="mailto:satya.achantavenkata@gmail.com" className="rounded-md border px-3 py-2" style={{ borderColor: "var(--border)" }}>
           Email Me
         </a>
         <a href="tel:+18135381113" className="rounded-md border px-3 py-2" style={{ borderColor: "var(--border)" }}>

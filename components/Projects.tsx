@@ -1,37 +1,16 @@
 const projects = [
   {
     name: "Fantasy League MichCA",
-    role: "Full-Stack Engineer & Product Owner",
+    role: "Product Builder",
     link: "https://www.fantasyleaguemichca.org",
     summary:
-      "Prediction-based fantasy cricket platform for Michigan Cricket Association fans.",
+      "Conceived, architected, and delivered a production-grade fantasy sports platform, owning the full lifecycle from ideation and UX through deployment and optimization.",
     outcomes: [
-      "Reduced result calculation time from 30 minutes to 15 seconds with scoring automation.",
-      "Built with Next.js, TypeScript, Prisma, Neon Postgres, and Vercel deployment.",
-      "Implemented modular architecture and PWA support for reliability and reach.",
-    ],
-  },
-  {
-    name: "Personal Portfolio",
-    role: "Solo Builder",
-    link: "https://www.itsmesatya.info",
-    summary:
-      "Career-focused portfolio for recruiters with concise experience, project, and credential highlights.",
-    outcomes: [
-      "Designed a clear one-page structure for fast scanning and direct outreach.",
-      "Published resume and cover letter access alongside straightforward contact paths.",
-      "Maintained with Next.js and TypeScript for clean, maintainable updates.",
-    ],
-  },
-  {
-    name: "AI/ML Learning Work",
-    role: "Hands-on Exploration",
-    link: "",
-    summary:
-      "Ongoing work with LangChain, LangGraph, and LangSmith to build practical agent and RAG workflows.",
-    outcomes: [
-      "Built Python-based RAG experiments for resume Q&A and standup-note assistance.",
-      "Applied vector embeddings and tool-calling patterns in proof-of-concept projects.",
+      "Designed a serverless backend using Next.js App Router, Prisma, and Neon Postgres, reducing match-result computation from 30 minutes to 15 seconds.",
+      "Made architecture choices across Next.js, Clerk Auth, Vercel, and ShadCN UI to balance velocity and maintainability.",
+      "Built modular UI with ShadCN and Tailwind for consistency, accessibility, and responsive behavior.",
+      "Added PWA capabilities for partial offline support during live matches.",
+      "Monitored performance and iterated on APIs/data models to support growth with low infrastructure overhead.",
     ],
   },
 ];

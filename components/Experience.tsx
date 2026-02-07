@@ -1,26 +1,31 @@
 const experiences = [
   {
     company: "Ithaka",
-    role: "Senior Software Engineer",
+    role: "Sr Software Engineer",
     location: "Ann Arbor, MI",
-    period: "Nov 2019 - Present",
+    period: "November 2019 - Present",
     highlights: [
-      "Reduced end-user feedback loop by 50% by introducing a real-time feedback widget.",
-      "Built and improved CI/CD automation across GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes.",
-      "Migrated legacy services to AWS Step Functions and Lambda for better scalability.",
-      "Partnered with product stakeholders to improve sprint planning and delivery predictability.",
+      "Acted as technical lead for initiatives across admin portals, reporting workflows, and public APIs with COUNTER compliance.",
+      "Led modernization by decomposing legacy services into AWS Lambda and Step Functions workflows.",
+      "Drove a 3x increase in release velocity through AI-assisted development workflows and automated testing standards.",
+      "Partnered with product owners to shape quarterly roadmaps, identify risks, and remove delivery bottlenecks.",
+      "Designed and maintained CI/CD pipelines with GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes.",
+      "Introduced a real-time feedback mechanism that reduced customer feedback loop time by 50%.",
+      "Mentored engineers across frontend and backend on React architecture, testing strategies, system design, and Kubernetes.",
+      "Owned delivery end-to-end from design review and implementation through production rollout and post-release stability.",
     ],
   },
   {
     company: "Infor",
     role: "Software Engineer",
     location: "Ann Arbor, MI",
-    period: "May 2015 - Nov 2019",
+    period: "May 2015 - November 2019",
     highlights: [
-      "Delivered enterprise features using Angular and Spring-based REST APIs.",
-      "Improved database design and query performance using Hibernate and SQL optimizations.",
-      "Led front-end modernization across Angular versions 2 to 8.",
-      "Improved analyst productivity by 30% through custom EDI mapping automation.",
+      "Built and maintained enterprise-grade applications for automotive clients using Angular and Java (Spring).",
+      "Partnered with the Principal Architect to review designs, discuss tradeoffs, and improve maintainability.",
+      "Led front-end modernization of legacy Angular codebases and introduced linting/coding standards.",
+      "Optimized data access layers using Hibernate and SQL to improve reporting performance and reliability.",
+      "Contributed to Agile and CI practices for more predictable releases and improved quality through Jenkins pipelines.",
     ],
   },
 ];
@@ -31,7 +36,7 @@ export default function Experience() {
       <h2 id="experience-title" className="section-title">
         Experience
       </h2>
-      <p className="section-intro">Recent roles and measurable delivery impact.</p>
+      <p className="section-intro">Experience aligned with resume.</p>
 
       <div className="grid gap-4">
         {experiences.map((item) => (
