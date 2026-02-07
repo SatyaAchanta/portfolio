@@ -1,62 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 type ExpandableListProps = {
   items: string[];
   initialCount?: number;
-  className?: string;
 };
 
-export default function ExpandableList({
-  items,
-  initialCount = 3,
-  className = "",
-}: ExpandableListProps) {
+export default function ExpandableList({ items, initialCount = 3 }: ExpandableListProps) {
   const [expanded, setExpanded] = useState(false);
-  const displayItems = expanded ? items : items.slice(0, initialCount);
+  const visibleItems = expanded ? items : items.slice(0, initialCount);
   const hasMore = items.length > initialCount;
 
   return (
-    <div className={className}>
-      <ul className="space-y-2 text-sm text-gray-400">
-        {displayItems.map((item, index) => (
-          <li key={index} className="flex gap-2">
-            <span className="text-cyan-500 mt-1 flex-shrink-0">▸</span>
-            <span>{item}</span>
-          </li>
+    <div>
+      <ul className="mb-0 mt-0 list-disc space-y-1.5 pl-5">
+        {visibleItems.map((item) => (
+          <li key={item}>{item}</li>
         ))}
       </ul>
-
-      {hasMore && (
+      {hasMore ? (
         <button
-          onClick={() => setExpanded(!expanded)}
-          className="mt-4 flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors md:hidden"
+          type="button"
+          onClick={() => setExpanded((value) => !value)}
+          className="mt-2 text-sm underline"
+          style={{ color: "var(--accent-strong)" }}
         >
-          {expanded ? (
-            <>
-              <FaChevronUp /> Show Less
-            </>
-          ) : (
-            <>
-              <FaChevronDown /> Show {items.length - initialCount} More
-            </>
-          )}
+          {expanded ? "Show fewer" : `Show ${items.length - initialCount} more`}
         </button>
-      )}
-
-      {/* Desktop: show all items */}
-      {!expanded && hasMore && (
-        <ul className="hidden md:block space-y-2 text-sm text-gray-400 mt-2">
-          {items.slice(initialCount).map((item, index) => (
-            <li key={index + initialCount} className="flex gap-2">
-              <span className="text-cyan-500 mt-1 flex-shrink-0">▸</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      ) : null}
     </div>
   );
 }

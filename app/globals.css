@@ -1,64 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --text-primary: #f3f4f6;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #dbe2ea;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --button-bg: #082f49;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --surface: #111827;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #273142;
+    --accent: #2dd4bf;
+    --accent-strong: #5eead4;
+    --button-bg: #082f49;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: #0a0a0a;
-  color: #ededed;
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* ORIGINAL PURPLE-PINK THEME (BACKUP) */
-/* .gradient-bg {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+a {
+  color: inherit;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-} */
-
-/* NEW OCEAN BLUE-TEAL THEME */
-.gradient-bg {
-  background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #0369a1 100%);
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #0891b2 0%, #0e7490 50%, #0369a1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.page-container {
+  width: min(980px, 100% - 2rem);
+  margin-inline: auto;
 }
 
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+.section-block {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
+.section-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
+.section-intro {
+  margin: 0 0 1rem;
+  color: var(--muted);
 }
 
-.animation-delay-4000 {
-  animation-delay: 4s;
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
 }

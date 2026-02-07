@@ -4,13 +4,15 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Satya Achanta - Senior Software Engineer",
   description:
-    "Portfolio of Satya Achanta - Evidence-based software engineer specializing in React, TypeScript, Python, and cloud technologies",
+    "Portfolio of Satya Achanta - Senior Software Engineer focused on scalable web platforms and product delivery.",
   keywords: [
     "Software Engineer",
     "React",
@@ -26,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" style={{ colorScheme: "dark" }}>
+    <html lang="en">
       <body className={poppins.className}>{children}</body>
     </html>
   );
