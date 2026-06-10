@@ -6,8 +6,8 @@ const contactLinks = [
   },
   {
     label: "Phone",
-    value: "+1 (813) 538-1113",
-    href: "tel:+18135381113",
+    value: "+1 (734) 383-0393",
+    href: "tel:+17343830393",
   },
   {
     label: "LinkedIn",
@@ -27,8 +27,8 @@ export default function Contact() {
         Contact
       </h2>
       <p className="section-intro">
-        Open to senior engineering opportunities and product-focused
-        collaboration.
+        Open to senior engineering roles, AI-forward product work, and
+        product-focused collaboration.
       </p>
 
       <div className="surface p-5">

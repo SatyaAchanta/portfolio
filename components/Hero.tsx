@@ -5,7 +5,7 @@ export default function Hero() {
         className="mb-2 text-xs uppercase tracking-[0.2em]"
         style={{ color: "var(--muted)" }}
       >
-        Senior Software Engineer | Full Stack Developer | Product Builder
+        Senior Software Engineer | AI-Forward Full-Stack Engineer
       </p>
       <h1
         id="hero-name"
@@ -17,9 +17,11 @@ export default function Hero() {
         className="mt-3 max-w-3xl text-base md:text-lg"
         style={{ color: "var(--muted)" }}
       >
-        Lead-minded Senior Software Engineer with 10+ years of experience
-        designing and scaling enterprise web platforms and APIs, with focus on
-        reliability, clean abstractions, and mentoring across the SDLC.
+        Senior Full-Stack Engineer with 10+ years of experience building
+        scalable web platforms, APIs, and AI-forward products. I combine React,
+        Python, Java/Spring, AWS, Kubernetes, CI/CD, OpenAI-powered features,
+        RAG workflows, and AI-assisted development to accelerate delivery
+        without lowering engineering standards.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
@@ -31,11 +33,11 @@ export default function Hero() {
           Email Me
         </a>
         <a
-          href="tel:+18135381113"
+          href="tel:+17343830393"
           className="rounded-md border px-3 py-2"
           style={{ borderColor: "var(--border)" }}
         >
-          (813) 538-1113
+          (734) 383-0393
         </a>
         <a
           href="https://www.linkedin.com/in/itsmesav"

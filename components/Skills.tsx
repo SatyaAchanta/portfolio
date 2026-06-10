@@ -1,23 +1,33 @@
 const skillCategories = [
   {
+    title: "AI and Intelligent Systems",
+    items: [
+      "OpenAI API",
+      "AI-Assisted Development",
+      "RAG Workflows",
+      "Embeddings-Based Retrieval",
+      "LangChain",
+    ],
+  },
+  {
     title: "Frontend",
-    items: ["React", "Next.js", "Angular", "TypeScript", "Tailwind CSS"],
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "Backend",
-    items: ["Python", "Django", "Java", "Spring Boot", "Node.js"],
+    items: ["Python", "Java", "Spring", "PostgreSQL", "API Development"],
   },
   {
     title: "Cloud and DevOps",
-    items: ["AWS", "Kubernetes", "Docker", "GitHub Actions", "Jenkins"],
+    items: ["AWS", "AWS Lambda", "Step Functions", "Kubernetes", "Docker"],
   },
   {
-    title: "Data and API",
-    items: ["MySQL", "Postgres", "Elasticsearch", "GraphQL", "REST API Design"],
+    title: "Data and Architecture",
+    items: ["Prisma", "ORM Tools", "Database Design", "GraphQL", "Design Systems"],
   },
   {
-    title: "Tooling",
-    items: ["Git", "JIRA", "Agile Delivery", "Testing Automation", "CI/CD Pipelines"],
+    title: "Delivery and Tooling",
+    items: ["GitLab CI", "GitHub Actions", "Jenkins", "Testing Automation", "CI/CD Pipelines"],
   },
 ];
 
@@ -27,7 +37,7 @@ export default function Skills() {
       <h2 id="skills-title" className="section-title">
         Skills
       </h2>
-      <p className="section-intro">Core technologies used to ship production software.</p>
+      <p className="section-intro">Core technologies used to ship production software and AI-forward product experiences.</p>
 
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((category) => (

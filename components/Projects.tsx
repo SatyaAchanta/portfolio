@@ -1,15 +1,29 @@
 const projects = [
   {
-    name: "MichCA Portal",
-    role: "Full-Stack Product Builder",
-    link: "https://www.michcausa.org",
+    name: "Fantasy League MichCA / michcausa.org",
+    role: "Product Builder",
+    link: "https://michcausa.org",
     summary:
-      "Built the official MichCA platform as a central operating system for a large local cricket league, giving players, volunteers, and administrators one place to manage schedules, training, certification, and league information.",
+      "Conceived, architected, and delivered a production-grade fantasy sports and MichCA platform experience, owning the product lifecycle from ideation and UX design through deployment and ongoing optimization.",
     outcomes: [
-      "Turned a fragmented, manual league workflow into a self-serve digital experience where users can browse schedules, grounds, committees, forms, and league documents without depending on back-and-forth coordinator support.",
-      "Added authenticated umpiring-training registration so volunteers can submit and update their details, preferred dates, dietary preferences, and questions in one flow instead of through scattered messages and spreadsheets.",
-      "Created admin tooling for reviewing registrations, updating outcomes, and managing training-related workflows, reducing operational overhead for league organizers during the season.",
-      "Designed the experience around a real sports community at scale, with homepage messaging and season stats that reflect 100+ teams and 500+ matches, helping the association communicate clearly with players and sponsors.",
+      "Designed a serverless full-stack architecture with Next.js, Prisma, and Neon Postgres, reducing match-result computation from 30 minutes to 15 seconds.",
+      "Built core product capabilities including admin workflows, leaderboards, database design, Excel ingestion flows, and a mobile-responsive application experience.",
+      "Developed admin workflows for managing users, teams, and weekly operations, reducing operational effort for league administration.",
+      "Designed data models for historical fantasy picks by user/week, leaderboard and scoring history, and team/user relationships to support downstream analytics and AI-based analysis.",
+      "Built a production-ready AI analysis feature using the OpenAI API to evaluate users' historical picks and generate strengths, weaknesses, recommendations, and relative standings.",
+      "Aggregated structured historical data from the database and sent it to the OpenAI API for LLM-generated analysis over structured inputs.",
+      "Continuously monitored performance, iterated on APIs and data models, and optimized the platform for sustainable growth and low operational overhead.",
+    ],
+  },
+  {
+    name: "RAG-Based Resume Chatbot Agent",
+    role: "Prototype / Learning Project",
+    summary:
+      "Built a RAG-style conversational resume agent in Python to deepen hands-on understanding of retrieval-based AI workflows.",
+    outcomes: [
+      "Chunked resume content, stored embeddings in vectorized form, and implemented a conversational retrieval agent in Python.",
+      "Used LangChain text splitters in the ingestion pipeline and built a user-input-driven conversation flow grounded in indexed resume content.",
+      "Practiced retrieval design patterns that can support future portfolio Q&A experiences without overclaiming production readiness.",
     ],
   },
   {
@@ -26,20 +40,6 @@ const projects = [
       "Modeled the product around community reuse and accessibility, helping newer players access lower-cost equipment while giving existing players a cleaner path to circulate gear back into the cricket ecosystem.",
     ],
   },
-  {
-    name: "Fantasy League MichCA",
-    role: "Product Builder",
-    link: "https://www.fantasyleaguemichca.org",
-    summary:
-      "Conceived, architected, and delivered a production-grade fantasy sports platform, owning the full lifecycle from ideation and UX through deployment and optimization.",
-    outcomes: [
-      "Designed a serverless backend using Next.js App Router, Prisma, and Neon Postgres, reducing match-result computation from 30 minutes to 15 seconds.",
-      "Made architecture choices across Next.js, Clerk Auth, Vercel, and ShadCN UI to balance velocity and maintainability.",
-      "Built modular UI with ShadCN and Tailwind for consistency, accessibility, and responsive behavior.",
-      "Added PWA capabilities for partial offline support during live matches.",
-      "Monitored performance and iterated on APIs/data models to support growth with low infrastructure overhead.",
-    ],
-  },
 ];
 
 export default function Projects() {
@@ -53,7 +53,7 @@ export default function Projects() {
         Projects
       </h2>
       <p className="section-intro">
-        Selected projects with scope, stack, and impact.
+        Selected products and AI prototypes with scope, stack, and impact.
       </p>
 
       <div className="grid gap-4">
