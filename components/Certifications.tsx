@@ -1,155 +1,87 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { FaAward, FaCheck } from "react-icons/fa";
 import Image from "next/image";
 
+const certifications = [
+  {
+    id: "ckad",
+    title: "Certified Kubernetes Application Developer (CKAD)",
+    issuer: "Cloud Native Computing Foundation (CNCF)",
+    issued: "February 2025",
+    certificationId: "LF-hfc7lb3taq",
+    image: "/ckad.png",
+    skills: [
+      "Pod design and configuration",
+      "Services and networking",
+      "Observability and troubleshooting",
+      "State persistence and deployment workflows",
+    ],
+  },
+  {
+    id: "cba",
+    title: "Certified Backstage Associate (CBA)",
+    issuer: "The Linux Foundation",
+    issued: "November 2025",
+    certificationId: "LF-sa3hh6zbfo",
+    image: "/cba.png",
+    skills: [
+      "Backstage catalog and workflows",
+      "Plugin customization",
+      "TypeScript and React integration",
+      "Developer platform enablement",
+    ],
+  },
+];
+
 export default function Certifications() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const ckadSkills = [
-    "Core Concepts",
-    "Configuration",
-    "Multi-container Pods",
-    "Observability",
-    "Pod Design",
-    "Services & Networking",
-    "State Persistence",
-    "Troubleshooting",
-  ];
-
-  const cbaSkills = [
-    "Backstage Development Workflow",
-    "Backstage Infrastructure",
-    "Backstage Catalog",
-    "Customizing Backstage",
-    "Frontend & Backend Plugins",
-    "React & Material UI Components",
-    "TypeScript Compilation",
-    "Docker & Container Images",
-  ];
-
-  const certifications = [
-    {
-      id: "ckad",
-      title: "Certified Kubernetes Application Developer",
-      abbreviation: "CKAD",
-      issuer: "Cloud Native Computing Foundation (CNCF)",
-      certificationId: "LF-hfc7lb3taq",
-      issued: "February 2025",
-      description:
-        "Demonstrates proficiency in designing, building, and deploying cloud-native applications for Kubernetes. Gained deep expertise in debugging applications faster through implementing CI/CD pipelines from scratch using Kubernetes, enabling smarter and faster delivery workflows.",
-      skills: ckadSkills,
-      gradientFrom: "from-purple-500",
-      gradientTo: "to-pink-500",
-      iconBg: "from-blue-500 to-purple-600",
-      image: "/ckad.png",
-    },
-    {
-      id: "cba",
-      title: "Certified Backstage Associate",
-      abbreviation: "CBA",
-      issuer: "The Linux Foundation",
-      certificationId: "LF-sa3hh6zbfo",
-      issued: "November 2025",
-      description:
-        "Proves expertise in leveraging and building standardized developer platforms using Backstage. Demonstrates the ability to work with internal development platforms essential for fast developer onboarding, cross-team collaboration, and product innovation.",
-      skills: cbaSkills,
-      gradientFrom: "from-cyan-500",
-      gradientTo: "to-teal-500",
-      iconBg: "from-cyan-500 to-teal-600",
-      image: "/cba.png",
-    },
-  ];
-
   return (
-    <section id="certifications" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="gradient-text">Certifications</span>
-          </h2>
+    <section
+      id="certifications"
+      className="section-block"
+      aria-labelledby="certifications-title"
+    >
+      <h2 id="certifications-title" className="section-title">
+        Certifications
+      </h2>
+      <p className="section-intro">
+        Credentials that support platform and cloud-native expertise.
+      </p>
 
-          <div className="max-w-5xl mx-auto space-y-8">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.2 + index * 0.2, duration: 0.8 }}
-                className={`bg-linear-to-br ${cert.gradientFrom} ${cert.gradientTo} p-1 rounded-2xl shadow-2xl`}
+      <div className="grid gap-4">
+        {certifications.map((certification) => (
+          <article key={certification.id} className="surface p-5">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+              <div
+                className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border"
+                style={{ borderColor: "var(--border)" }}
               >
-                <div className="bg-gray-900 p-8 md:p-12 rounded-xl">
-                  <div className="flex flex-col md:flex-row gap-8 items-center">
-                    <div className="shrink-0">
-                      <div className="w-32 h-32 relative rounded-full overflow-hidden shadow-xl">
-                        <Image
-                          src={cert.image}
-                          alt={`${cert.abbreviation} Badge`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-4">
-                        <FaAward className="text-3xl text-yellow-500" />
-                        <h3 className="text-2xl md:text-3xl font-bold text-white">
-                          {cert.title}
-                        </h3>
-                      </div>
-
-                      <div className="mb-4">
-                        <p className="text-lg text-gray-300 mb-2">
-                          <strong>Issued by:</strong> {cert.issuer}
-                        </p>
-                        <p className="text-lg text-gray-300 mb-2">
-                          <strong>Certification ID:</strong>{" "}
-                          <span className="font-mono text-purple-400">
-                            {cert.certificationId}
-                          </span>
-                        </p>
-                        <p className="text-lg text-gray-300">
-                          <strong>Issued:</strong> {cert.issued}
-                        </p>
-                      </div>
-
-                      <p className="text-gray-300 mb-6 leading-relaxed">
-                        {cert.description}
-                      </p>
-
-                      <div className="bg-gray-800 rounded-lg p-6">
-                        <h4 className="font-bold text-white mb-4 flex items-center gap-2">
-                          <span>Validated Skills:</span>
-                        </h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          {cert.skills.map((skill, skillIndex) => (
-                            <div
-                              key={skillIndex}
-                              className="flex items-center gap-2"
-                            >
-                              <FaCheck className="text-green-500 shrink-0" />
-                              <span className="text-gray-300">{skill}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                <Image
+                  src={certification.image}
+                  alt={`${certification.title} badge`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="m-0 text-lg font-semibold">
+                  {certification.title}
+                </h3>
+                <p className="m-0 text-sm" style={{ color: "var(--muted)" }}>
+                  {certification.issuer} | {certification.issued}
+                </p>
+                <p
+                  className="mb-0 mt-1 text-sm"
+                  style={{ color: "var(--muted)" }}
+                >
+                  Certification ID: {certification.certificationId}
+                </p>
+                <ul className="mb-0 mt-3 list-disc space-y-1.5 pl-5 text-sm">
+                  {certification.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

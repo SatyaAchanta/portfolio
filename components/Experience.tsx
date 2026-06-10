@@ -1,115 +1,57 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { FaBriefcase, FaCalendar, FaMapMarkerAlt } from "react-icons/fa";
-import TruncatedText from "./TruncatedText";
-import ExpandableList from "./ExpandableList";
-
 const experiences = [
   {
     company: "Ithaka",
-    role: "Senior Software Engineer",
+    role: "Sr Software Engineer",
     location: "Ann Arbor, MI",
     period: "November 2019 - Present",
-    description:
-      "Accomplished Senior Software Engineer maintaining admin portals, reporting workflows, and public APIs in compliance with COUNTER specifications",
     highlights: [
-      "Reduced end-user feedback loop by 50% by introducing a real-time feedback widget that streamlined user communication",
-      "Proficient in AI coding agents and automated testing pipelines to release software with speed",
-      "Eliminated delivery bottlenecks by collaborating with product owners to plan and execute quarterly sprints with precision",
-      "Enhanced CI/CD efficiency by building scalable pipelines using GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes",
-      "Modernized legacy services into AWS Step Functions and Lambda architectures, improving scalability and reducing maintenance",
-      "Regular contributor to open-source design systems and experienced in implementing React/Python/Django microfrontends",
-      "Recognized for end-to-end ownership across SDLC—from architecture and QA to production deployment",
-      "Mentor junior engineers and interns, sharing knowledge on debugging and best practices",
+      "Acted as technical lead for initiatives across admin portals, reporting workflows, and public APIs with COUNTER compliance.",
+      "Led modernization by decomposing legacy services into AWS Lambda and Step Functions workflows.",
+      "Drove a 3x increase in release velocity through AI-assisted development workflows and automated testing standards.",
+      "Partnered with product owners to shape quarterly roadmaps, identify risks, and remove delivery bottlenecks.",
+      "Designed and maintained CI/CD pipelines with GitHub Actions, GitLab, Jenkins, Docker, and Kubernetes.",
+      "Introduced a real-time feedback mechanism that reduced customer feedback loop time by 50%.",
+      "Mentored engineers across frontend and backend on React architecture, testing strategies, system design, and Kubernetes.",
+      "Owned delivery end-to-end from design review and implementation through production rollout and post-release stability.",
     ],
-    color: "from-purple-500 to-pink-500",
   },
   {
     company: "Infor",
     role: "Software Engineer",
     location: "Ann Arbor, MI",
     period: "May 2015 - November 2019",
-    description:
-      "Engineered enterprise-grade software solutions for major automotive clients, driving feature delivery and system modernization",
     highlights: [
-      "Spearheaded front-end development in Angular 8 and built RESTful APIs with Spring Framework",
-      "Redesigned and optimized database schemas using Hibernate and SQL, improving data consistency and cutting query latency",
-      "Partnered directly with Principal Architect in recurring 1:1s to refine architectural design patterns and elevate code quality",
-      "Led Angular migration initiatives, modernizing legacy front-end architecture (Angular 2 → 4 → 6 → 8)",
-      "Introduced automated linting (TSLint, ESLint) to enforce maintainability and reduce code smells",
-      "Automated release operations by developing silent-install scripts, streamlining deployment cycles",
-      "Accelerated analyst productivity by 30% through custom EDI mapping between reports and Java classes",
-      "Championed Agile best practices and continuous integration via Jenkins, Git/SVN, and JIRA",
+      "Built and maintained enterprise-grade applications for automotive clients using Angular and Java (Spring).",
+      "Partnered with the Principal Architect to review designs, discuss tradeoffs, and improve maintainability.",
+      "Led front-end modernization of legacy Angular codebases and introduced linting/coding standards.",
+      "Optimized data access layers using Hibernate and SQL to improve reporting performance and reliability.",
+      "Contributed to Agile and CI practices for more predictable releases and improved quality through Jenkins pipelines.",
     ],
-    color: "from-blue-500 to-cyan-500",
   },
 ];
 
 export default function Experience() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
-    <section id="experience" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="gradient-text">Work Experience</span>
-          </h2>
+    <section id="experience" className="section-block" aria-labelledby="experience-title">
+      <h2 id="experience-title" className="section-title">
+        Experience
+      </h2>
+      <p className="section-intro">Experience aligned with resume.</p>
 
-          <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
-            {experiences.map((exp, index) => (
-              <motion.article
-                key={exp.company}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className={`rounded-2xl bg-gradient-to-br ${exp.color} p-[1px] shadow-xl`}
-              >
-                <div className="flex h-full flex-col rounded-2xl bg-gray-900/95 p-6">
-                  <div className="flex items-center gap-3">
-                    <FaBriefcase className="text-xl text-purple-400" />
-                    <div>
-                      <p className="text-sm uppercase tracking-[0.2em] text-gray-400">
-                        {exp.company}
-                      </p>
-                      <h3 className="text-2xl font-bold text-white">
-                        {exp.role}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-400">
-                    <span className="inline-flex items-center gap-2">
-                      <FaCalendar className="text-purple-400" />
-                      {exp.period}
-                    </span>
-                    <span className="inline-flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-400" />
-                      {exp.location}
-                    </span>
-                  </div>
-
-                  <p className="mt-4 text-gray-300">
-                    <TruncatedText text={exp.description} maxLength={80} />
-                  </p>
-
-                  <div className="mt-6">
-                    <ExpandableList items={exp.highlights} initialCount={3} />
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </motion.div>
+      <div className="grid gap-4">
+        {experiences.map((item) => (
+          <article key={item.company} className="surface p-5">
+            <h3 className="m-0 text-lg font-semibold">{item.role}</h3>
+            <p className="m-0 text-sm" style={{ color: "var(--muted)" }}>
+              {item.company} | {item.location} | {item.period}
+            </p>
+            <ul className="mb-0 mt-3 list-disc space-y-1.5 pl-5">
+              {item.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );
