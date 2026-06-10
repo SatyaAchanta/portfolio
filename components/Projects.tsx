@@ -44,11 +44,17 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-block" aria-labelledby="projects-title">
+    <section
+      id="projects"
+      className="section-block"
+      aria-labelledby="projects-title"
+    >
       <h2 id="projects-title" className="section-title">
         Projects
       </h2>
-      <p className="section-intro">Selected projects with scope, stack, and impact.</p>
+      <p className="section-intro">
+        Selected projects with scope, stack, and impact.
+      </p>
 
       <div className="grid gap-4">
         {projects.map((project) => (
