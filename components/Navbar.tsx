@@ -56,21 +56,11 @@ export default function Navbar() {
                       </a>
                     </li>
                   ))}
-                  <li className="list-none">
-                    <a href="/cover-letter.pdf" download className="block rounded px-2 py-1.5 hover:underline">
-                      Cover Letter
-                    </a>
-                  </li>
                 </ul>
               </div>
             </details>
           </nav>
 
-          <div className="flex items-center gap-2 text-sm">
-            <a href="/resume.pdf" download className="rounded-md border px-3 py-1.5" style={{ borderColor: "var(--border)" }}>
-              Resume
-            </a>
-          </div>
         </div>
 
         {mobileOpen ? (
@@ -88,26 +78,6 @@ export default function Navbar() {
                     </a>
                   </li>
                 ))}
-                <li className="list-none pt-2">
-                  <a
-                    href="/resume.pdf"
-                    download
-                    className="block rounded px-2 py-1.5 hover:underline"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    Resume
-                  </a>
-                </li>
-                <li className="list-none">
-                  <a
-                    href="/cover-letter.pdf"
-                    download
-                    className="block rounded px-2 py-1.5 hover:underline"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    Cover Letter
-                  </a>
-                </li>
               </ul>
             </nav>
           </div>

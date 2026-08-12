@@ -1,15 +1,5 @@
 const contactLinks = [
   {
-    label: "Email",
-    value: "satya.achantavenkata@gmail.com",
-    href: "mailto:satya.achantavenkata@gmail.com",
-  },
-  {
-    label: "Phone",
-    value: "+1 (734) 383-0393",
-    href: "tel:+17343830393",
-  },
-  {
     label: "LinkedIn",
     value: "linkedin.com/in/itsmesav",
     href: "https://www.linkedin.com/in/itsmesav",
@@ -32,15 +22,7 @@ export default function Contact() {
       </p>
 
       <div className="surface p-5">
-        <a
-          href="mailto:satya.achantavenkata@gmail.com"
-          className="inline-block rounded-md border px-4 py-2 text-sm font-medium"
-          style={{ borderColor: "var(--border)" }}
-        >
-          Email Me
-        </a>
-
-        <dl className="mb-0 mt-5 grid gap-3">
+        <dl className="m-0 grid gap-3">
           {contactLinks.map((item) => (
             <div
               key={item.label}

@@ -60,10 +60,6 @@ vercel
 
 ## 📝 Customization
 
-### Update Resume
-
-Replace `/public/resume.pdf` with your own resume PDF.
-
 ### Update Contact Info
 
 Edit the contact details in:
@@ -92,5 +88,4 @@ This project is open source and available under the MIT License.
 ## 👨‍💻 Author
 
 **Satya Achanta**
-- Email: satya.achantavenkata@gmail.com
 - Location: Ann Arbor, Michigan

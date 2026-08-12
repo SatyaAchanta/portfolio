@@ -24,7 +24,6 @@ portfolio/
 │   ├── Contact.tsx          # Contact form + info
 │   └── Footer.tsx           # Footer with social links
 ├── public/
-│   └── sav-resume.pdf       # Your resume (ready to download)
 ├── package.json
 ├── README.md
 ├── DEPLOYMENT.md
@@ -45,8 +44,7 @@ portfolio/
 1. **Hero Section**
    - Animated gradient background with blob animations
    - Name, title, and professional objective
-   - CTA buttons (Contact + Download Resume)
-   - Social links (GitHub, LinkedIn, Email, Phone)
+   - LinkedIn social link
    - Scroll indicator
 
 2. **About Section**
@@ -83,8 +81,7 @@ portfolio/
    - Quote about pursuing education
 
 7. **Contact Section**
-   - Working contact form (mailto integration)
-   - Contact info cards (Email, Phone, Location)
+   - LinkedIn contact link
    - Smooth animations
 
 8. **Footer**
@@ -134,7 +131,6 @@ You can easily customize:
 2. **Social Links:** Update in Hero, Footer components
 3. **Experience:** Edit `components/Experience.tsx`
 4. **Skills:** Edit `components/Skills.tsx`
-5. **Resume:** Replace `public/sav-resume.pdf`
 
 ## 🎯 What Makes This Portfolio Stand Out
 
@@ -144,7 +140,7 @@ You can easily customize:
 4. **Mobile-Optimized** - Perfect on all devices
 5. **Fast Loading** - Static generation for optimal performance
 6. **SEO-Friendly** - Proper metadata and structure
-7. **Recruiter-Focused** - Easy resume download and contact
+7. **Recruiter-Focused** - Clear professional profile and LinkedIn contact
 
 ## 📊 Performance
 

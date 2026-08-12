@@ -26,20 +26,6 @@ export default function Hero() {
 
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
         <a
-          href="mailto:satya.achantavenkata@gmail.com"
-          className="rounded-md border px-3 py-2"
-          style={{ borderColor: "var(--border)" }}
-        >
-          Email Me
-        </a>
-        <a
-          href="tel:+17343830393"
-          className="rounded-md border px-3 py-2"
-          style={{ borderColor: "var(--border)" }}
-        >
-          (734) 383-0393
-        </a>
-        <a
           href="https://www.linkedin.com/in/itsmesav"
           target="_blank"
           rel="noopener noreferrer"
