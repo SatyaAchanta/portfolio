@@ -5,7 +5,7 @@ export default function Hero() {
         className="mb-2 text-xs uppercase tracking-[0.2em]"
         style={{ color: "var(--muted)" }}
       >
-        Senior Software Engineer | Full Stack Developer | Product Builder
+        Senior Full-Stack Engineer | Developer Experience
       </p>
       <h1
         id="hero-name"
@@ -17,25 +17,21 @@ export default function Hero() {
         className="mt-3 max-w-3xl text-base md:text-lg"
         style={{ color: "var(--muted)" }}
       >
-        Lead-minded Senior Software Engineer with 10+ years of experience
-        designing and scaling enterprise web platforms and APIs, with focus on
-        reliability, clean abstractions, and mentoring across the SDLC.
+        Senior Full-Stack Engineer with 10+ years of experience building
+        scalable web platforms and APIs, from React and TypeScript frontends to
+        Python and Java/Spring services. I contribute to company internal tools
+        and improve developer experience through clearer workflows, reliable
+        CI/CD, and AI-assisted development.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
         <a
-          href="mailto:satya.achantavenkata@gmail.com"
+          href="/sav-resume.pdf"
+          download="Satya-Achanta-Resume.pdf"
           className="rounded-md border px-3 py-2"
           style={{ borderColor: "var(--border)" }}
         >
-          Email Me
-        </a>
-        <a
-          href="tel:+18135381113"
-          className="rounded-md border px-3 py-2"
-          style={{ borderColor: "var(--border)" }}
-        >
-          (813) 538-1113
+          Download Resume (PDF)
         </a>
         <a
           href="https://www.linkedin.com/in/itsmesav"

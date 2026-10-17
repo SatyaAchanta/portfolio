@@ -1,6 +1,6 @@
 # Satya Achanta - Portfolio
 
-A modern, eye-catching portfolio website built with Next.js, TypeScript, Tailwind CSS, and Material-UI.
+A clean portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -17,9 +17,6 @@ A modern, eye-catching portfolio website built with Next.js, TypeScript, Tailwin
 - **Framework:** Next.js 16
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **UI Components:** Material-UI (MUI)
-- **Animations:** Framer Motion
-- **Icons:** React Icons
 
 ## 📦 Installation
 
@@ -63,10 +60,6 @@ vercel
 
 ## 📝 Customization
 
-### Update Resume
-
-Replace `/public/sav-resume.pdf` with your own resume PDF.
-
 ### Update Contact Info
 
 Edit the contact details in:
@@ -95,6 +88,4 @@ This project is open source and available under the MIT License.
 ## 👨‍💻 Author
 
 **Satya Achanta**
-- Email: satya.achantavenkata@gmail.com
 - Location: Ann Arbor, Michigan
-

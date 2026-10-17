@@ -10,14 +10,21 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Satya Achanta - Senior Software Engineer",
+  title: "Satya Achanta - Full-Stack Engineer & Developer Experience",
   description:
-    "Portfolio of Satya Achanta - Senior Software Engineer focused on scalable web platforms and product delivery.",
+    "Portfolio of Satya Achanta - Senior Full-Stack Engineer building web platforms, APIs, and company internal tools that improve developer experience and delivery.",
   keywords: [
     "Software Engineer",
+    "Developer Experience",
+    "Internal Tools",
+    "AI-Forward Engineer",
+    "OpenAI",
+    "RAG",
     "React",
     "TypeScript",
     "Python",
+    "Java",
+    "AWS",
     "Full Stack Developer",
   ],
 };
