@@ -17,8 +17,8 @@ export default function Contact() {
         Contact
       </h2>
       <p className="section-intro">
-        Open to senior engineering roles, AI-forward product work, and
-        product-focused collaboration.
+        Open to senior full-stack engineering roles, developer experience work,
+        and internal tooling initiatives.
       </p>
 
       <div className="surface p-5">

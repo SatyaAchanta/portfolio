@@ -1,11 +1,12 @@
 const experiences = [
   {
-    company: "Ithaka",
-    role: "Sr Software Engineer",
+    company: "ITHAKA",
+    role: "Senior Software Engineer",
     location: "Ann Arbor, MI",
     period: "Nov 2019 - Present",
     highlights: [
       "Act as a lead-minded engineer across admin portals, reporting workflows, and public APIs, owning ambiguous initiatives end to end.",
+      "Contribute to company internal tools and improve developer experience through clearer repo conventions, onboarding support, and automation of development workflows.",
       "Led modernization by decomposing legacy services into AWS Lambda and Step Functions workflows, improving scalability and reducing operational overhead.",
       "Improved release velocity by 3x through AI-assisted development workflows that accelerated implementation, debugging, testing, and developer self-sufficiency.",
       "Applied AI-enabled engineering practices with Codex and Copilot for code scaffolding, refactoring, testing, and full-stack feature implementation.",
@@ -39,7 +40,7 @@ export default function Experience() {
       <h2 id="experience-title" className="section-title">
         Experience
       </h2>
-      <p className="section-intro">Experience aligned with resume.</p>
+      <p className="section-intro">Full-stack delivery, internal tooling, and engineering improvements across teams.</p>
 
       <div className="grid gap-4">
         {experiences.map((item) => (

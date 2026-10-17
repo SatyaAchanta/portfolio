@@ -1,17 +1,7 @@
 const skillCategories = [
   {
-    title: "AI and Intelligent Systems",
-    items: [
-      "OpenAI API",
-      "AI-Assisted Development",
-      "RAG Workflows",
-      "Embeddings-Based Retrieval",
-      "LangChain",
-    ],
-  },
-  {
     title: "Frontend",
-    items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS"],
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "ShadCN UI"],
   },
   {
     title: "Backend",
@@ -26,8 +16,16 @@ const skillCategories = [
     items: ["Prisma", "ORM Tools", "Database Design", "GraphQL", "Design Systems"],
   },
   {
+    title: "Developer Experience and Internal Tools",
+    items: ["Internal Tooling", "Developer Workflows", "Repo Conventions", "Onboarding", "Testing Automation"],
+  },
+  {
     title: "Delivery and Tooling",
-    items: ["GitLab CI", "GitHub Actions", "Jenkins", "Testing Automation", "CI/CD Pipelines"],
+    items: ["GitLab CI", "GitHub Actions", "Jenkins", "CI/CD Pipelines"],
+  },
+  {
+    title: "AI and Intelligent Systems",
+    items: ["OpenAI API", "AI-Assisted Development", "AI Agent Automation", "RAG Workflows", "Embeddings-Based Retrieval", "LangChain"],
   },
 ];
 
@@ -37,7 +35,7 @@ export default function Skills() {
       <h2 id="skills-title" className="section-title">
         Skills
       </h2>
-      <p className="section-intro">Core technologies used to ship production software and AI-forward product experiences.</p>
+      <p className="section-intro">Technologies and practices for full-stack products, internal tools, and reliable delivery.</p>
 
       <div className="grid gap-4 md:grid-cols-2">
         {skillCategories.map((category) => (
