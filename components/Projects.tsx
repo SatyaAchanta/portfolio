@@ -15,31 +15,6 @@ const projects = [
       "Continuously monitored performance, iterated on APIs and data models, and optimized the platform for sustainable growth and low operational overhead.",
     ],
   },
-  {
-    name: "RAG-Based Resume Chatbot Agent",
-    role: "Prototype / Learning Project",
-    summary:
-      "Built a RAG-style conversational resume agent in Python to deepen hands-on understanding of retrieval-based AI workflows.",
-    outcomes: [
-      "Chunked resume content, stored embeddings in vectorized form, and implemented a conversational retrieval agent in Python.",
-      "Used LangChain text splitters in the ingestion pipeline and built a user-input-driven conversation flow grounded in indexed resume content.",
-      "Practiced retrieval design patterns that can support future portfolio Q&A experiences without overclaiming production readiness.",
-    ],
-  },
-  {
-    name: "CricSwap",
-    role: "Full-Stack Product Builder",
-    link: "https://cricswap.com",
-    summary:
-      "Built a focused marketplace for cricketers to buy and sell used gear locally, making it easier for players to recover value from unused equipment and for other players to find affordable gear quickly.",
-    outcomes: [
-      "Improved discoverability with search across titles, descriptions, cities, and tags so buyers can find relevant bats, pads, helmets, and other gear without digging through generic social posts or chat threads.",
-      "Made listing creation practical for everyday users with structured forms, multi-image uploads, cover-photo selection, price and condition fields, and direct seller contact details after sign-in.",
-      "Added account tools for sellers to manage their own listings, edit details, mark items as sold, and stay within simple listing limits, keeping the marketplace current instead of filling with stale posts.",
-      "Introduced an approval workflow with admin moderation, rejection reasons, and hidden-until-approved publishing so the marketplace can build trust and stay usable as activity grows.",
-      "Modeled the product around community reuse and accessibility, helping newer players access lower-cost equipment while giving existing players a cleaner path to circulate gear back into the cricket ecosystem.",
-    ],
-  },
 ];
 
 export default function Projects() {
@@ -53,7 +28,7 @@ export default function Projects() {
         Projects
       </h2>
       <p className="section-intro">
-        Selected products and AI prototypes with scope, stack, and impact.
+        Production work with scope, stack, and impact.
       </p>
 
       <div className="grid gap-4">
